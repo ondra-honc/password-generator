@@ -1,0 +1,158 @@
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+:root
+{
+    --text-color: #E0E2DB;
+    --header-bg: #191716;
+    --bg: #36322f;
+    --input-bg-color: #8A716A;
+}
+
+body
+{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--bg);
+    overflow-x: hidden;
+    min-height: 100vh; 
+}
+
+*
+{
+    color: var(--text-color);
+}
+
+main
+{
+    flex: 1;
+}
+
+.head
+{
+    display: flex;
+    background-color: var(--header-bg);
+    align-items: center;
+    justify-content: center;
+}
+
+.input-fields
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1.5rem;
+    gap: 6px;
+}
+
+input[type=number]
+{
+    text-align: center;
+    font-size: medium;
+    padding: .2rem 1rem;
+    box-sizing: border-box; 
+    background-color: var(--input-bg-color);
+    border: none; 
+    border-radius: .3rem;
+    box-shadow: none;
+}
+
+input[type=number]:focus
+{
+    outline: none;
+}
+
+input[type=checkbox]
+{
+    appearance: none;
+    -webkit-appearance: none;
+    width: 1.2rem;
+    height: 1.2rem;
+    background-color: var(--input-bg-color);
+    border-radius: .3rem;
+    cursor: pointer;
+    display: inline-grid;
+    place-content: center;
+}
+
+input[type="checkbox"]:checked::before {
+    content: "";
+    width: 0.6rem;
+    height: 0.6rem;
+    background-color: white;
+    clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+}
+
+.generate-button
+{
+    transform: scale(1.3);
+}
+
+.generate-button > button
+{
+    appearance: none;
+    -webkit-appearance: none;
+    
+    background-color: var(--input-bg-color);
+    outline: none;
+    border: none;
+    border-radius: .25rem;
+    padding: .25rem;
+    cursor: pointer;
+    transition: ease-in .05s;
+}
+
+@media (hover: hover)
+{
+    .generate-button > button:hover
+    {
+        transform: scale(0.95);
+    }
+}
+
+.generate-button > button:active
+{
+    transform: scale(0.9);
+    filter: brightness(0.85);
+}
+
+.output
+{
+    margin-top: 3rem;
+}
+
+.outputarea
+{
+    display: flex;
+    gap: 5px;
+}
+
+#copy-button
+{
+    background: none;
+    box-shadow: none;
+    border: none;
+    outline: none;
+}
+
+#copy-button:active
+{
+    transform: scale(1.1);
+}
+
+footer
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--header-bg);
+}

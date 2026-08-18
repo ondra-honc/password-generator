@@ -8,6 +8,50 @@
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 </head>
 <body>
-    
+    <header class="head">
+        <h1>Password Generator</h1>
+    </header>
+
+    <main>
+        <div class="input-fields">
+            <label for="input">Password Length</label>
+            <input type="number" id="password-length" value="16" min="6" max="128">
+        </div>
+
+        <div class="input-fields">
+            <label for="uppercase">Include Uppercase Letters</label>
+            <input id="uppercase" type="checkbox">
+        </div>
+
+        <div class="input-fields">
+            <label for="numbers">Include Numbers</label>
+            <input id="numbers" type="checkbox">
+        </div>
+
+        <div class="input-fields">
+            <label for="symbols">Include Symbols</label>
+            <input id="symbols" type="checkbox">
+        </div>
+
+        <div class="generate-button input-fields">
+            <label for="generate">Generate Password</label>
+            <button id="generate">Generate</button>
+        </div>
+
+        <div class="output input-fields">
+            <label for="outputarea">Your Password:</label>
+            <div class="outputarea">
+                <output id="outputarea">Here will be your password</output>
+                <button id="copy-button">
+                    <img src="image.png" width="16" height="16" alt="copy button">
+                </button>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Ondřej Honc. All Rights Served</p>
+    </footer>
 </body>
+    <script src="out/app.js" type="module"></script>
 </html>
