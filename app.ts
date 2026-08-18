@@ -1,27 +1,20 @@
-function getSecureCrypto() {
-  const currentGlobal = globalThis as any;
-
-  if (currentGlobal.crypto && typeof currentGlobal.crypto.getRandomValues === 'function') {
-    return currentGlobal.crypto;
-  }
-
-  try {
-    return require('crypto');
-  } catch (e) {
-    throw new Error("No API Found");
-  }
-}
-
 function generateSecureBytes(size: number): Uint8Array {
-  const cryptoAPI = getSecureCrypto();
-  const array = new Uint8Array(size);
-  
-  if (typeof cryptoAPI.getRandomValues === 'function') {
-    cryptoAPI.getRandomValues(array);
-  } else if (typeof cryptoAPI.randomBytes === 'function') {
-    const buffer = cryptoAPI.randomBytes(size);
-    array.set(buffer);
-  }
-  
-  return array;
+    const array = new Uint8Array(size);
+    globalThis.crypto.getRandomValues(array);
+    return array;
 }
+
+const copyButton = document.getElementById("copy-button") as HTMLButtonElement;
+const passwordLength = document.getElementById("password-length") as HTMLInputElement;
+const uppercase = document.getElementById("uppercase") as HTMLInputElement;
+const numbers = document.getElementById("numbers") as HTMLInputElement;
+const symbols = document.getElementById("symbols") as HTMLInputElement;
+
+copyButton.addEventListener('click', () => {
+    const outputPassword = document.getElementById("outputarea") as HTMLOutputElement;
+    const text = outputPassword.textContent?.trim() || "";
+
+    if (text === "Here will be your password" || text === '') return;
+
+    navigator.clipboard.writeText(text);
+})
