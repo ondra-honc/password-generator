@@ -2,5 +2,27 @@
   "devDependencies": {
     "@types/node": "^26.2.0",
     "typescript": "^7.0.2"
-  }
+  },
+  "name": "password-generator",
+  "version": "1.0.0",
+  "description": "",
+  "main": "/out/app.js",
+  "dependencies": {
+    "undici-types": "^8.3.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ondra-honc/password-generator.git"
+  },
+  "keywords": [],
+  "author": "Ondřej Honc",
+  "license": "MIT",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/ondra-honc/password-generator/issues"
+  },
+  "homepage": "https://github.com/ondra-honc/password-generator#readme"
 }
