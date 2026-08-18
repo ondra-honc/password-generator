@@ -64,8 +64,11 @@ generateButton.addEventListener('click', () => {
     else {
         parsedNumber = parseInt(passwordLength.value);
     }
-    if (parsedNumber <= 3) {
-        showNotification("Please make sure the length is atleast 6 characters");
+    if (parsedNumber < 6 || parsedNumber > 128) {
+        const text = parsedNumber < 6
+            ? "Please make sure the length is at least 6 characters"
+            : "Please make sure the length is maximally 128 characters";
+        showNotification(text);
         return;
     }
     outputPassword.textContent = generatePassword(parsedNumber, uppercase.checked, numbers.checked, symbols.checked);
