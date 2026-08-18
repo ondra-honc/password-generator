@@ -134,6 +134,8 @@ input[type="checkbox"]:checked::before {
 {
     display: flex;
     gap: 5px;
+    word-break: break-all;
+    min-width: 0;
 }
 
 #copy-button
