@@ -9,3 +9,5 @@ A lightweight, secure password generator written in TypeScript. Easily generate 
 * Cryptographically Secure: Powered by native browser/Node crypto APIs for entropy.
 
 * Zero Dependencies: Fast, minimal, and lightweight.
+
+Try [Live Demo](https://ondra-honc.github.io/password-generator/)
